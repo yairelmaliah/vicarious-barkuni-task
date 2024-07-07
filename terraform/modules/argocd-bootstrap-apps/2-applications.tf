@@ -47,7 +47,7 @@ resource "kubernetes_manifest" "argo_chart_application" {
         helm = {
           parameters = [
             {
-              name  = "global.serviceAccountName"
+              name  = "global.serviceAccount.name"
               value = aws_eks_pod_identity_association.barkuni-app-sa.service_account
             },
           ]
@@ -96,6 +96,6 @@ resource "aws_iam_role_policy_attachment" "ec2-full-access-attachment" {
 resource "aws_eks_pod_identity_association" "barkuni-app-sa" {
   cluster_name    = var.cluster_name
   namespace       = "default"
-  service_account = "barkuni-app-sa-test"
+  service_account = "barkuni-app-sa"
   role_arn        = aws_iam_role.pod-identity-role.arn
 }
