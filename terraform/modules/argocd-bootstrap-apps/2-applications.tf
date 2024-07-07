@@ -11,7 +11,7 @@ resource "kubernetes_manifest" "argo_infra_application" {
     spec = {
       project = "default"
       source = {
-        repoURL        = "https://github.com/yairelmaliah/vicarious-task.git"
+        repoURL        = "https://github.com/yairelmaliah/vicarious-barkuni-task.git"
         targetRevision = "HEAD"
         path           = "k8s/infra/"
       }
@@ -41,7 +41,7 @@ resource "kubernetes_manifest" "argo_chart_application" {
     spec = {
       project = "default"
       source = {
-        repoURL        = "https://github.com/yairelmaliah/vicarious-task.git"
+        repoURL        = "https://github.com/yairelmaliah/vicarious-barkuni-task.git"
         targetRevision = "HEAD"
         path           = "k8s/barkuni-chart/"
       }

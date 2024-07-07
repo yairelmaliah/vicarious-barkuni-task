@@ -4,6 +4,7 @@ import kubernetes
 from dotenv import load_dotenv
 
 load_dotenv()
+
 app = Flask(__name__)
 
 # Endpoint to view a welcome message
