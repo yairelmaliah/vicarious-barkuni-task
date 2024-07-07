@@ -43,7 +43,7 @@ Additionally, the project hosts the Barkuni API, a Flask-based RESTful service, 
 
 ### Create IAM Role for Terraform
 
-Create an IAM role named `terraform` with Administrator access and attach the policy to your user to allow to assume terraform role:
+Create an IAM role named `terraform` with Administrator access policy and attach the policy to your user to allow to assume terraform role:
 
 ```json
 {

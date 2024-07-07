@@ -1,5 +1,13 @@
 global:
   imagePullSecrets: []
+  serviceAccount:
+    create: true
+    name: barkuni-app-sa
+    rules:
+      - apiGroups: [""]
+        resources: ["pods"]
+        verbs: ["get", "list"]
+        
 services:
   - name: barkuni-app
     enabled: true
@@ -21,12 +29,4 @@ services:
       limits:
         cpu: "200m"
         memory: "256Mi"
-    serviceAccount:
-      create: true
-    rbac:
-      create: true
-      rules:
-        - apiGroups: [""]
-          resources: ["pods"]
-          verbs: ["get", "list"]
 # Additional services can be defined in the same pattern
