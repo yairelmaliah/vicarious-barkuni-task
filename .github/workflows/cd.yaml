@@ -4,7 +4,7 @@ on:
     branches:
       - master
     paths:
-      - 'app/**'
+      - 'api/**'
       - '.github/workflows/cd.yaml'
 
 env:
