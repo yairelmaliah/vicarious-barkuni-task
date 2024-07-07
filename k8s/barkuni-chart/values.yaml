@@ -13,7 +13,7 @@ services:
     enabled: true
     image:
       repository: 156444772887.dkr.ecr.us-east-1.amazonaws.com/barkuni-app
-      tag: 6ec7848
+      tag: ecb5650
       pullPolicy: Always
     port: 8000
     ingress:
