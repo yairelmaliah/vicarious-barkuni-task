@@ -7,13 +7,12 @@ global:
       - apiGroups: [""]
         resources: ["pods"]
         verbs: ["get", "list"]
-        
 services:
   - name: barkuni-app
     enabled: true
     image:
       repository: 156444772887.dkr.ecr.us-east-1.amazonaws.com/barkuni-app
-      tag: ecb5650
+      tag: "7402518"
       pullPolicy: Always
     port: 8000
     ingress:
